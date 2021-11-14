@@ -1,0 +1,133 @@
+
+config dnsmasq
+	option domainneeded '1'
+	option boguspriv '1'
+	option filterwin2k '0'
+	option localise_queries '1'
+	option rebind_protection '1'
+	option rebind_localhost '1'
+	option local '/lan/'
+	option domain 'lan'
+	option expandhosts '1'
+	option nonegcache '0'
+	option authoritative '1'
+	option readethers '1'
+	option leasefile '/tmp/dhcp.leases'
+	option resolvfile '/tmp/resolv.conf.d/resolv.conf.auto'
+	option nonwildcard '1'
+	option localservice '1'
+	option ednspacket_max '1232'
+	option port '53'
+	list server '127.0.0.1#5333'
+	option noresolv '1'
+
+config dhcp 'lan'
+	option interface 'lan'
+	option start '100'
+	option limit '150'
+	option leasetime '12h'
+	option dhcpv4 'server'
+	option ra_slaac '1'
+	list ra_flags 'managed-config'
+	list ra_flags 'other-config'
+	option ra 'server'
+	option dhcpv6 'server'
+	option ra_management '1'
+
+config dhcp 'wan'
+	option interface 'wan'
+	option ignore '1'
+
+config odhcpd 'odhcpd'
+	option maindhcp '0'
+	option leasefile '/tmp/hosts/odhcpd'
+	option leasetrigger '/usr/sbin/odhcpd-update'
+	option loglevel '4'
+
+config srvhost
+	option srv '_vlmcs._tcp'
+	option target 'OpenWrt'
+	option port '1688'
+	option class '0'
+	option weight '100'
+
+config domain
+	option name 'AC1200GU'
+	option ip '192.168.101.10'
+
+config domain
+	option name 'DSM'
+	option ip '192.168.101.20'
+
+config domain
+	option name 'ESXi'
+	option ip '192.168.101.254'
+
+config domain
+	option name 'MAYIPC1'
+	option ip '192.168.101.173'
+
+config domain
+	option name 'LTPC2'
+	option ip '192.168.101.130'
+
+config domain
+	option name 'EzproWin7'
+	option ip '192.168.101.143'
+
+config domain
+	option name 'ONEPLUS8T'
+	option ip '192.168.101.215'
+
+config domain
+	option name 'NOVA8'
+	option ip '192.168.101.125'
+
+config domain
+	option name 'IPAD7'
+	option ip '192.168.101.211'
+
+config domain
+	option name 'C3C'
+	option ip '192.168.101.122'
+
+config domain
+	option name 'C6C'
+	option ip '192.168.101.136'
+
+config domain
+	option name 'INPHICI18'
+	option ip '192.168.101.140'
+
+config domain
+	option name 'XiaoDu'
+	option ip '192.168.101.191'
+
+config domain
+	option name 'YIJIAN'
+	option ip '192.168.101.188'
+
+config domain
+	option name '126NW'
+	option ip '192.168.101.200'
+
+config domain
+	option name 'MAYIIP6S'
+	option ip '192.168.101.160'
+
+config domain
+	option name 'LTIP6S'
+	option ip '192.168.101.175'
+
+config domain
+	option name 'VIVO'
+	option ip '192.168.101.125'
+
+config domain
+	option name 'CX7'
+	option ip '192.168.101.148'
+
+config domain
+	option name 'ZWQ3'
+	option ip '192.168.101.107'
+
