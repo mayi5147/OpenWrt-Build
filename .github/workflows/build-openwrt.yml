@@ -15,7 +15,7 @@
 #
 #
 
-name: 编译EZproV5自用固件
+name: 触发自动编译固件
 on:
   workflow_dispatch:
     inputs:
