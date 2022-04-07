@@ -111,7 +111,7 @@ sed -i 's/OpenWrt/mayi5147 by OpenWrt/g' package/base-files/files/bin/config_gen
 #git clone --depth=1 https://github.com/project-openwrt/openwrt-gowebdav
 
 # Add luci-app-nat6-helper
-git clone --depth=1 https://github.com/Ausaci/luci-app-nat6-helper          
+#git clone --depth=1 https://github.com/Ausaci/luci-app-nat6-helper          
 
 # Add luci-theme-rosy
 #git clone --depth=1 -b openwrt-18.06 https://github.com/shiyu1314/luci-theme-rosy
