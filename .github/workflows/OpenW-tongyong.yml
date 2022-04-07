@@ -9,7 +9,7 @@
 #代码里有 name: 后面的内容随便改,冒号后面是有个空格的,如果修改固件名字就要考虑能不能显示出你想要的
 
 
-name: OpenWrt-E8820S 闭源超精简固件5.10
+name: OpenWrt-Actions 自动编译固件
 
 on: 
   release:
@@ -34,8 +34,8 @@ on:
 
 
 #点☆Star触发开始编译
-  watch:
-    types: started
+# watch:
+#   types: started
 
 
 env:
@@ -44,12 +44,12 @@ env:
   FEEDS_CONF: feeds.conf.default
   CONFIG_FILE: config/e8820s.config
   DIY_P1_SH: script/diy-part1.sh
-  DIY_P2_SH: script/diy-part3.sh
+  DIY_P2_SH: script/diy-part2.sh
   UPLOAD_BIN_DIR: true
   UPLOAD_FIRMWARE: true
   UPLOAD_COWTRANSFER: true
-  UPLOAD_WETRANSFER: true
-  UPLOAD_RELEASE: true
+  UPLOAD_WETRANSFER: false
+  UPLOAD_RELEASE: false
   TZ: Asia/Shanghai
 
 jobs:
