@@ -99,13 +99,13 @@ jobs:
         chmod +x $DIY_P1_SH
         cd openwrt
         $GITHUB_WORKSPACE/$DIY_P1_SH
-    - name: 下载feeds跟安装自定义插件
+    - name: 下载feeds自定义插件
       run: cd openwrt && ./scripts/feeds update -a
 
-    - name: Install feeds
+    - name: 安装feeds自定义插件
       run: cd openwrt && ./scripts/feeds install -a
 
-    - name: 再次下载安装feeds
+    - name: 效验下载和安装feeds自定义插件
       run: |
         cd openwrt
         ./scripts/feeds update -a
