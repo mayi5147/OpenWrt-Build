@@ -51,7 +51,7 @@ env:
   REPO_URL: https://github.com/nanchuci/lede
   REPO_BRANCH: master
   FEEDS_CONF: feeds.conf.default
-  CONFIG_FILE: config/e8820s-biyuan-xiao.config
+  CONFIG_FILE: config/ezpro.config
   DIY_P1_SH: script/diy-part1.sh
   DIY_P2_SH: script/diy-part2.sh
   UPLOAD_BIN_DIR: true
@@ -173,7 +173,7 @@ jobs:
       uses: actions/upload-artifact@main
       if: steps.organize.outputs.status == 'success' && !cancelled()
       with:
-        name: E8820S-超精简5.10
+        name: 自动编译好的固件
         path: ${{ env.FIRMWARE }}
 
     - name: 上传固件到奶牛快传
