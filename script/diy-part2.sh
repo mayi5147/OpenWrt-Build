@@ -39,10 +39,10 @@ sed -i 's/luci-theme-bootstrap/luci-theme-argon/g' feeds/luci/collections/luci/M
 sed -i "s/'UTC'/'CST-8'\n        set system.@system[-1].zonename='Asia\/Shanghai'/g" package/base-files/files/bin/config_generate
 
 #修正连接数
-sed -i '/customized in this file/a net.netfilter.nf_conntrack_max=165535' package/base-files/files/etc/sysctl.conf
+#sed -i '/customized in this file/a net.netfilter.nf_conntrack_max=165535' package/base-files/files/etc/sysctl.conf
 
 # 修改内核版本为5.10
-sed -i 's/5.4/5.10/g' target/linux/ramips/Makefile
+#sed -i 's/5.4/5.10/g' target/linux/ramips/Makefile
 
 # Clone community packages to package/community
 mkdir package/community
