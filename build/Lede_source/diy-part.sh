@@ -67,5 +67,5 @@ rm -rf ipk.tar
 rm -rf sha256sums
 rm -rf version.buildinfo
 rm -rf profiles.json
-rm -rf ./packages/*
+rm -rf packages
 EOF
