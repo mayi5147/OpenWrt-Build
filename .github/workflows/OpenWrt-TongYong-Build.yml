@@ -105,7 +105,7 @@ jobs:
     - name: 安装feeds自定义插件
       run: cd openwrt && ./scripts/feeds install -a
 
-    - name: 效验下载和安装feeds自定义插件
+    - name: 效验feeds自定义插件
       run: |
         cd openwrt
         ./scripts/feeds update -a
