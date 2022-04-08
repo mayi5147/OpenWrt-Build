@@ -9,7 +9,7 @@
 #代码里有 name: 后面的内容随便改,冒号后面是有个空格的,如果修改固件名字就要考虑能不能显示出你想要的
 
 
-name: 编译immortalwrt版RedmiAX6s固件
+name: 通用编译OpenWrt固件
 
 on:
   repository_dispatch:
@@ -63,7 +63,7 @@ env:
 
 jobs:
   build:
-    name: 编译RedmiAX6s固件
+    name: 编译Openwrt固件
     runs-on: ubuntu-20.04
 
     steps:
@@ -164,8 +164,6 @@ jobs:
         rm -rf sha256sums
         rm -rf version.buildinfo
         rm -rf profiles.json
-        rm -rf immortalwrt-mediatek-mt7622-xiaomi_redmi-router-ax6s.manifest
-        rm -rf immortalwrt-mediatek-mt7622-xiaomi_redmi-router-ax6s -initramfs-recovery.itb
         echo "FIRMWARE=$PWD" >> $GITHUB_ENV
         echo "::set-output name=status::success"
         
