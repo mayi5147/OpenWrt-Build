@@ -61,9 +61,11 @@ sed -i 's/"Argon 主题设置"/"主题设置"/g' `grep "Argon 主题设置" -rl 
 cat >${GITHUB_WORKSPACE}/Clear <<-EOF
 rm -rf config.buildinfo
 rm -rf feeds.buildinfo
-rm -rf openwrt-x86-64-generic-kernel.bin
-rm -rf openwrt-x86-64-generic.manifest
-rm -rf openwrt-x86-64-generic-squashfs-rootfs.img.gz
+rm -rf Lede-mediatek-mt7622-xiaomi_redmi-router-ax6s.manifest
+rm -rf Lede-mediatek-mt7622-xiaomi_redmi-router-ax6s-initramfs-recovery.itb
+rm -rf ipk.tar
 rm -rf sha256sums
 rm -rf version.buildinfo
+rm -rf profiles.json
+rm -rf ./packages/*
 EOF
