@@ -26,7 +26,7 @@ EOF
 
 sed -i 's/luci-theme-bootstrap/luci-theme-argon/g' feeds/luci/collections/luci/Makefile            # 选择argon为默认主题
 
-sed -i "s/OpenWrt /mayi5147 by OpenWrt /g" $ZZZ           # 增加个性名字 ${Author} 默认为你的github帐号
+#sed -i "s/OpenWrt /mayi5147 by OpenWrt /g" $ZZZ           # 增加个性名字 ${Author} 默认为你的github帐号
 
 #sed -i '/CYXluq4wUazHjmCDBCqXF/d' $ZZZ                                                             # 设置密码为空
 
