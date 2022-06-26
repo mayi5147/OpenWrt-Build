@@ -10,7 +10,7 @@
 
 
 cat >$NETIP <<-EOF
-uci set network.lan.ipaddr='10.10.0.1'                                    # IPv4 地址(openwrt后台地址)
+uci set network.lan.ipaddr='10.0.0.1'                                    # IPv4 地址(openwrt后台地址)
 uci set network.lan.netmask='255.255.255.0'                                 # IPv4 子网掩码
 #uci set network.lan.gateway='192.168.2.1'                                   # IPv4 网关
 #uci set network.lan.broadcast='192.168.2.255'                               # IPv4 广播
@@ -25,7 +25,7 @@ EOF
 
 sed -i 's/luci-theme-bootstrap/luci-theme-argon/g' feeds/luci/collections/luci/Makefile            # 选择argon为默认主题
 
-#sed -i "s/OpenWrt /EZProV5 by OpenWrt /g" $ZZZ           # 增加个性名字 ${Author} 默认为你的github帐号
+sed -i "s/OpenWrt /EZProV5 by OpenWrt /g" $ZZZ           # 增加个性名字 ${Author} 默认为你的github帐号
 
 #sed -i '/CYXluq4wUazHjmCDBCqXF/d' $ZZZ                                                             # 设置密码为空
 
