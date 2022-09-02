@@ -8,11 +8,11 @@
 
 
 cat >$NETIP <<-EOF
-uci set network.lan.ipaddr='192.168.31.1'                      # IPv4 地址(openwrt后台地址)
+uci set network.lan.ipaddr='192.168.2.1'                      # IPv4 地址(openwrt后台地址)
 uci set network.lan.netmask='255.255.255.0'                   # IPv4 子网掩码
 uci set network.lan.delegate='0'                              # 去掉LAN口使用内置的 IPv6 管理(若用IPV6请把'0'改'1')
 uci set dhcp.@dnsmasq[0].filter_aaaa='1'                      # 禁止解析 IPv6 DNS记录(若用IPV6请把'1'改'0')
-uci set system.@system[0].hostname='RedmiAX6s'                # 修改主机名称为OpenWrt-123
+uci set system.@system[0].hostname='M68s'                # 修改主机名称为OpenWrt-123
 EOF
 
 
@@ -25,7 +25,7 @@ sed -i "s/bootstrap/argon/ig" feeds/luci/collections/luci/Makefile
 
 
 # 增加个性名字 ${Author} 默认为你的github帐号,修改时候把 ${Author} 替换成你要的
-#sed -i "s/OpenWrt /EZProV5 by OpenWrt /g" "$ZZZ_PATH"
+#sed -i "s/OpenWrt /M68s by OpenWrt /g" "$ZZZ_PATH"
 
 
 # 删除默认防火墙
